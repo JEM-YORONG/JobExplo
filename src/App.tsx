@@ -10,7 +10,7 @@ function App() {
         <p className="landing-tagline">Discover your next opportunity.</p>
         <a
           className="landing-cta"
-          href="https://github.com/yourusername/JobExplo"
+          href="https://github.com/JEM-YORONG/JobExplo"
           target="_blank"
           rel="noopener noreferrer"
         >
