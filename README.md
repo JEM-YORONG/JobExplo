@@ -1,6 +1,9 @@
 # JobExplo
 JobExplo — Discover your next opportunity.
 
+# API
+https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
