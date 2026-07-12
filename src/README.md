@@ -2,15 +2,13 @@
 
 ## src/
 - **components/** - Reusable UI components
+- **features/** - Feature-based modules (jobs, search)
 - **pages/** - Route-level page components
 - **hooks/** - Custom React hooks
 - **utils/** - Helper/utility functions
-- **context/** - React Context providers/consumers
-- **routes/** - Application routing configuration
-- **theme/** - Theme tokens, colors, typography
-- **providers/** - Global app providers (router, query, theme)
 - **styles/** - Global styles and CSS modules
 - **assets/** - Images, fonts, and other static assets
+- **tests/** - Test files
 
 ## Entry Points
 - **src/index.tsx** - Main application bootstrap
