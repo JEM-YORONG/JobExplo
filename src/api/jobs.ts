@@ -92,6 +92,9 @@ function normalizeSearchResponse(response: unknown): JobSearchResponse {
 }
 
 export const searchJobs = async (params: JobSearchParams): Promise<JobSearchResponse> => {
+  if (!params.query?.trim()) {
+    return { data: { jobs: [] }, total: 0, page: 1, num_pages: 1 }
+  }
   const { data } = await api.get(ENDPOINTS.SEARCH_JOBS, { params })
   return normalizeSearchResponse(data)
 }

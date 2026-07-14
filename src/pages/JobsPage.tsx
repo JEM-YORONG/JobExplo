@@ -28,7 +28,9 @@ export function JobsPage() {
     setSearchVersion(v => v + 1)
   }
 
-  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, isError, error, refetch } = useInfiniteJobs(committedFilters, searchVersion)
+  const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, isError, error, refetch } = useInfiniteJobs(committedFilters, searchVersion, {
+    enabled: !!committedFilters.query,
+  })
 
   const { loadMoreRef } = useInfiniteScroll(
     () => {

@@ -4,6 +4,6 @@ import App from '../App'
 
 test('renders JobExplo landing page', () => {
   render(<App />)
-  const titleElement = screen.getByText(/jobexplo/i)
+  const titleElement = screen.getAllByRole('link', { name: /jobexplo/i }).find(link => !link.parentElement?.getAttribute('class')?.includes('nav'))
   expect(titleElement).toBeInTheDocument()
 })

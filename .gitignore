@@ -30,6 +30,9 @@ coverage
 # Misc
 *.local
 
+# Stray artifacts (extracted npm tarballs)
+*.tgz
+
 # TypeScript build info
 *.tsbuildinfo
 tsconfig.tsbuildinfo
