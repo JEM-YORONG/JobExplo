@@ -18,12 +18,15 @@ export function JobDetailsPage() {
   const { data, isLoading, isError, error, refetch } = useJobDetails(id || '')
   const { isJobSaved, toggleSaveJob } = useSavedJobs()
 
-  const relatedQuery = useJobs({
-    query: data?.data?.[0]?.title || '',
-    country: 'us',
-    page: 1,
-    num_pages: 1,
-  })
+  const relatedQuery = useJobs(
+    {
+      query: data?.data?.[0]?.title || '',
+      country: 'us',
+      page: 1,
+      num_pages: 1,
+    },
+    { enabled: !!data?.data?.[0]?.title }
+  )
 
   const job = data?.data?.[0]
   const saved = job ? isJobSaved(job.id) : false

@@ -9,6 +9,7 @@ export function useJobs(
   return useQuery({
     queryKey: ['jobs', params],
     queryFn: () => searchJobs(params),
+    enabled: !!params.query?.trim(),
     ...options,
   })
 }
@@ -26,6 +27,7 @@ export function useInfiniteJobs(
       if (lastPage.page >= lastPage.num_pages) return undefined
       return lastPage.page + 1
     },
+    enabled: !!params.query?.trim(),
     ...options,
   })
 }
